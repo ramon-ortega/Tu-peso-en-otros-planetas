@@ -8,15 +8,32 @@
     <h1>Vamos a calcular tu peso en distintos Planetas</h1>
     <p>En este proyecto, calcularemos tu peso en los planetas que giran alrededor de nuestro sistema solar.</p>
     <script>
+        var respuesta_usuario = prompt("¿Cuánto pesas?");
+        var peso = parseInt(respuesta_usuario);
+
         const g_tierra = 9.80, g_jupiter = 24.79;
         const g_mercurio = 3.70, g_saturno = 10.44;
         const g_marte = 3.71, g_neptuno = 11.15;
         const g_venus = 8.87, g_urano = 8.87;
-        var peso = 75;
         var peso_marte, peso_mercurio, peso_venus, peso_tierra, peso_jupiter, peso_saturno, peso_neptuno, peso_urano;
 
         peso_marte = peso * g_marte / g_tierra;
-        document.write("Tu peso en marte es " + peso_marte.toFixed(2) + " kg")
+        peso_tierra = peso;
+        peso_mercurio = peso * g_mercurio / g_tierra;
+        peso_venus = peso * g_venus / g_tierra;
+        peso_jupiter = peso * g_jupiter / g_tierra;
+        peso_saturno = peso * g_saturno / g_tierra;
+        peso_neptuno = peso * g_neptuno / g_tierra;
+        peso_urano = peso * g_urano / g_tierra;
+
+        document.write("Tu peso en Mercurio es <strong>" + peso_mercurio.toFixed(2) + "</strong> kg");
+        document.write("Tu peso en Venus es <strong>" + peso_venus.toFixed(2) + "</strong> kg");
+        document.write("Tu peso en La Tierra es <strong>" + peso_tierra.toFixed(2) + "</strong> kg");
+        document.write("Tu peso en Marte es <strong>" + peso_marte.toFixed(2) + "</strong> kg");
+        document.write("Tu peso en Jupiter es <strong>" + peso_jupiter.toFixed(2) + "</strong> kg");
+        document.write("Tu peso en Saturno es <strong>" + peso_saturno.toFixed(2) + "</strong> kg");
+        document.write("Tu peso en Urano es <strong>" + peso_urano.toFixed(2) + "</strong> kg");
+        document.write("Tu peso en Neptuno es <strong>" + peso_neptuno.toFixed(2) + "</strong> kg");
     </script>
 </body>
 </html>
