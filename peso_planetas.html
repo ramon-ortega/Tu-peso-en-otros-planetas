@@ -8,6 +8,8 @@
     <h1>Vamos a calcular tu peso en distintos Planetas</h1>
     <p>En este proyecto, calcularemos tu peso en los planetas que giran alrededor de nuestro sistema solar.</p>
     <script>
+        var respuesta_planeta = parseInt(prompt("¿En que planeta quieres saber tu peso? \n 1-Mercurio  2-Venus  3-La Tierra \n 4-Marte  5-Jupiter  6-Saturno \n" +
+            "7-Urano  8-Neptuno"));
         var respuesta_usuario = prompt("¿Cuánto pesas?");
         var peso = parseInt(respuesta_usuario);
 
@@ -26,14 +28,26 @@
         peso_neptuno = peso * g_neptuno / g_tierra;
         peso_urano = peso * g_urano / g_tierra;
 
-        document.write("Tu peso en Mercurio es <strong>" + peso_mercurio.toFixed(2) + "</strong> kg");
-        document.write("Tu peso en Venus es <strong>" + peso_venus.toFixed(2) + "</strong> kg");
-        document.write("Tu peso en La Tierra es <strong>" + peso_tierra.toFixed(2) + "</strong> kg");
-        document.write("Tu peso en Marte es <strong>" + peso_marte.toFixed(2) + "</strong> kg");
-        document.write("Tu peso en Jupiter es <strong>" + peso_jupiter.toFixed(2) + "</strong> kg");
-        document.write("Tu peso en Saturno es <strong>" + peso_saturno.toFixed(2) + "</strong> kg");
-        document.write("Tu peso en Urano es <strong>" + peso_urano.toFixed(2) + "</strong> kg");
-        document.write("Tu peso en Neptuno es <strong>" + peso_neptuno.toFixed(2) + "</strong> kg");
+        if (respuesta_planeta == 1){
+            document.write("Tu peso en Mercurio es <strong>" + peso_mercurio.toFixed(2) + "</strong> kg");
+        } else if (respuesta_planeta == 2){
+            document.write("Tu peso en Venus es <strong>" + peso_venus.toFixed(2) + "</strong> kg");
+        } else if (respuesta_planeta == 3){
+            document.write("Tu peso en La Tierra es <strong>" + peso_tierra.toFixed(2) + "</strong> kg");
+        } else if (respuesta_planeta == 4){
+            document.write("Tu peso en Marte es <strong>" + peso_marte.toFixed(2) + "</strong> kg");
+        } else if (respuesta_planeta == 5){
+            document.write("Tu peso en Jupiter es <strong>" + peso_jupiter.toFixed(2) + "</strong> kg");
+        } else if (respuesta_planeta == 6){
+            document.write("Tu peso en Saturno es <strong>" + peso_saturno.toFixed(2) + "</strong> kg");
+        } else if (respuesta_planeta == 7){
+            document.write("Tu peso en Urano es <strong>" + peso_urano.toFixed(2) + "</strong> kg");
+        } else if (respuesta_planeta == 8){
+            document.write("Tu peso en Neptuno es <strong>" + peso_neptuno.toFixed(2) + "</strong> kg");
+        } else {
+            document.write("La opción que seleccionaste no es valida, recarga la página para que puedas saber tu peso en otro planeta")
+        }
+
     </script>
 </body>
 </html>
