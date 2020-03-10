@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Peso en distintos planetas</title>
+</head>
+<body>
+    <h1>Vamos a calcular tu peso en distintos Planetas</h1>
+    <p>En este proyecto, calcularemos tu peso en los planetas que giran alrededor de nuestro sistema solar.</p>
+    <script>
+        const g_tierra = 9.80;
+        const g_mercurio = 3.70;
+        const g_marte = 3.71;
+        const g_venus = 12;
+        var tu_peso = 75;
+        var peso_final_marte;
+
+        peso_final_marte = tu_peso * g_marte / g_tierra;
+        document.write("tu peso en marte es " + peso_final_marte)
+    </script>
+</body>
+</html>
