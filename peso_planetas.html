@@ -8,15 +8,15 @@
     <h1>Vamos a calcular tu peso en distintos Planetas</h1>
     <p>En este proyecto, calcularemos tu peso en los planetas que giran alrededor de nuestro sistema solar.</p>
     <script>
-        const g_tierra = 9.80;
-        const g_mercurio = 3.70;
-        const g_marte = 3.71;
-        const g_venus = 12;
-        var tu_peso = 75;
-        var peso_final_marte;
+        const g_tierra = 9.80, g_jupiter = 24.79;
+        const g_mercurio = 3.70, g_saturno = 10.44;
+        const g_marte = 3.71, g_neptuno = 11.15;
+        const g_venus = 8.87, g_urano = 8.87;
+        var peso = 75;
+        var peso_marte, peso_mercurio, peso_venus, peso_tierra, peso_jupiter, peso_saturno, peso_neptuno, peso_urano;
 
-        peso_final_marte = tu_peso * g_marte / g_tierra;
-        document.write("tu peso en marte es " + peso_final_marte)
+        peso_marte = peso * g_marte / g_tierra;
+        document.write("Tu peso en marte es " + peso_marte.toFixed(2) + " kg")
     </script>
 </body>
 </html>
